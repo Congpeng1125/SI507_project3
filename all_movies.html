@@ -1,0 +1,12 @@
+<ul>
+            {% for movie in all_movies %}
+            <li>{{ movie[0] }} by {{ movie[1] }} - {{ movie[2] }}</li><br>
+            {% endfor %}
+            </ul>
+
+            {% if not all_movies %}
+            There are no saved favorite movies to show.Sorry for that.
+            {% endif %}
+
+
+            <a href="{{ url_for('index')}}">Return to home page</a>
